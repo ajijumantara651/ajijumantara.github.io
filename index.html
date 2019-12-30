@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <img src="img/LogoUI.png" width="40px" class="rounded-circle" alt="">
+            </a>
+            <a class="navbar-brand page-scroll" href="#home">Aji jumantara</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+         </div>
+    </nav>
+
+    
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="text-center text-white">
+                <a href="" itemid="">
+                    <img src="img/aji.jpg" class="img" alt="">
+                </a>
+                <h5 class="display-5">Aji Jumantara</h5>
+                <p class="display-5" style="color:currentColor;">student || employee || entrepreneur</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center">About</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row justify justify-content-center" style="margin-bottom: 100px;">
+                <div class="col-sm-4">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae et eaque suscipit praesentium neque, incidunt magnam dolorem animi, totam error, ipsum aliquam vitae nobis alias. Illum aliquam nam dignissimos veritatis.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolores quam cum, temporibus labore nesciunt ut architecto impedit ipsum atque nobis perspiciatis in, fuga,deleniti necessitatibus porro et veritatis voluptatum?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center" style="margin-top: 20px;">Gallery</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row text-center m-x-auto">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="thumbnail" style="" >
+                        <img src="img/logo6.jpg">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="thumbnail" style="" >
+                        <img src="img/logo10.jpg" >
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="thumbnail" style="" >
+                        <img src="img/logo11.jpg" >
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="thumbnail" style="" >
+                        <img src="img/logo8.jpg" >
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="thumbnail" style="">
+                        <img src="img/logo11.jpg" >
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="thumbnail" >
+                        <img src="img/logo6.jpg" >
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container content-center">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>Contact</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row justify justify-content-center">
+                <div class="col-sm-5">
+                    <form action="send.php" method="post">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Nama</label>
+                            <input name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="masukan nama">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">email</label>
+                            <input name="email" type="text" class="form-control" id="formGroupExampleInput2" placeholder="masukan email">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Telepon</label>
+                            <input name="telepon" type="tel" class="form-control" id="formGroupExampleInput2" placeholder="masukan Nomor">
+                        </div>
+                        <div class="form-group">
+                            <label for="Pesan">Pesan</label>
+                            <textarea name="pesan" class="form-control" rows="5" placeholder="masukan pesan"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+                <div class="thefooter">
+                    <div class="col-sm-12">
+                        <p>&copy; 2019 | built with by. <a href="https://instagram.com/aji_jumanji">Aji jumantara.</a></p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
