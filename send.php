@@ -8,14 +8,14 @@ include('phpmailer/SMTP.php');
 $email_penerima = 'jumantaraaji@gmail.com'; // Isikan dengan email pengirim
 $nama_pengirim = ['name']; // Isikan dengan nama pengirim
 $email_penerima = $_POST['email']; // Ambil email penerima dari inputan form
-$nama = $_POST['name'];
+$name = $_POST['name'];
 $telepon = $_POST['telepon'];
 // $subjek = $_POST['subjek']; // Ambil subjek dari inputan form
 $pesan = $_POST['pesan']; // Ambil pesan dari inputan form
 // $attachment = $_FILES['attachment']['name']; // Ambil nama file yang di upload
 $mail = new PHPMailer;
 $mail->isSMTP();
-$mail->Host = 'smtp.gmail.com';
+$mail->Host = 'jumantaraaji.gmail.com';
 $mail->Username = $email_penerima; // Email Pengirim
 $mail->Password = 'jijuman651'; // Isikan dengan Password email pengirim
 $mail->Port = 465;
