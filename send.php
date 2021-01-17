@@ -1,32 +1,81 @@
 <?php
-$name=$_POST['name'];
-$email=$_POST['email'];
-$telepon=$_POST['telepon'];
-$pesan=$_POST['pesan'];
-
-$to="jumantaraaji@gmail.com";
-
-$pesan="Dear, <br /> <br />".$pesan;
-
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
-
-// More headers
-$headers .= 'From:'.$name.' <'.$email.'>'."\r\n" . 'Reply-To: '.$name.' <'.$email.'>'."\r\n";
-// $headers .= 'Cc: admin@email.com' . "\r\n"; //untuk cc lebih dari satu tinggal kasih koma
-@mail($to,$pesan,$headers);
-if (@mail) { ?>
-<script language="javascript" type="text/javascript">
-alert('Thank you for the pesan. We will index you shortly.');
-window.location = 'index.html';
-</script>
-<?php
-}
-else { ?>
-<script language="javascript" type="text/javascript">
-alert('pesan failed. Please, send an email to xxxx@email.co.id');
-window.location = 'index.html';
-</script>
-<?php
-}
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+// Include librari phpmailer
+include('phpmailer/Exception.php');
+include('phpmailer/PHPMailer.php');
+include('phpmailer/SMTP.php');
+$email_penerima = 'jumantaraaji@gmail.com'; // Isikan dengan email pengirim
+$nama_pengirim = ['name']; // Isikan dengan nama pengirim
+$email_penerima = $_POST['email']; // Ambil email penerima dari inputan form
+$nama = $_POST['name'];
+$telepon = $_POST['telepon'];
+// $subjek = $_POST['subjek']; // Ambil subjek dari inputan form
+$pesan = $_POST['pesan']; // Ambil pesan dari inputan form
+// $attachment = $_FILES['attachment']['name']; // Ambil nama file yang di upload
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->Username = $email_penerima; // Email Pengirim
+$mail->Password = 'jijuman651'; // Isikan dengan Password email pengirim
+$mail->Port = 465;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = 'ssl';
+// $mail->SMTPDebug = 2; // Aktifkan untuk melakukan debugging
+$mail->setFrom($email_penerima, $nama_pengirim);
+$mail->addAddress($email_pengirim, $email_penerima);
+$mail->isHTML(true); // Aktifkan jika isi emailnya berupa html
+// Load file content.php
+ob_start();
+// include "index.html";
+// $content = ob_get_contents(); // Ambil isi file content.php dan masukan ke variabel $content
+// ob_end_clean();
+// $mail->Subject = $subjek;
+$content = $pesan;
+$mail->Body = $content;
+// $mail->AddEmbeddedImage('image/logo.png', 'logo_mynotescode', 'logo.png'); // Aktifkan jika ingin menampilkan gambar dalam email
+// if(empty($attachment)){ // Jika tanpa attachment
+    $send = $mail->send();
+    if($send){ // Jika Email berhasil dikirim
+        echo "<h1>Email berhasil dikirim</h1><br /><a href='index.html'>Kembali ke Form</a>";
+    }else{ // Jika Email gagal dikirim
+        echo "<h1>Email gagal dikirim</h1><br /><a href='index.html'>Kembali ke Form</a>";
+        // echo '<h1>ERROR<br /><small>Error while sending email: '.$mail->getError().'</small></h1>'; // Aktifkan untuk mengetahui error message
+    }
+// }else{ // Jika dengan attachment
+//     $tmp = $_FILES['attachment']['tmp_name'];
+//     $size = $_FILES['attachment']['size'];
+//     if($size <= 25000000){ // Jika ukuran file <= 25 MB (25.000.000 bytes)
+//         $mail->addAttachment($tmp, $attachment); // Add file yang akan di kirim
+//         $send = $mail->send();
+//         if($send){ // Jika Email berhasil dikirim
+//             echo "<h1>Email berhasil dikirim</h1><br /><a href='index.php'>Kembali ke Form</a>";
+//         }else{ // Jika Email gagal dikirim
+//             echo "<h1>Email gagal dikirim</h1><br /><a href='index.php'>Kembali ke Form</a>";
+//             // echo '<h1>ERROR<br /><small>Error while sending email: '.$mail->getError().'</small></h1>'; // Aktifkan untuk mengetahui error message
+//         }
+//     }else{ // Jika Ukuran file lebih dari 25 MB
+//         echo "<h1>Ukuran file attachment maksimal 25 MB</h1><br /><a href='index.php'>Kembali ke Form</a>";
+//     }
+// }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

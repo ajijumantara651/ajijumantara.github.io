@@ -1,9 +1,13 @@
 body{
     margin-bottom: 0px;
+    font-family: sans-serif;
+    font-size: 10px
+    background-image: url("../img/ajijuman99.jpg") no repeat;
 }
 
 .a {
     border-radius: 30px;
+    
 }
 
 .img{
@@ -13,13 +17,14 @@ body{
     border: 3px solid white;
     margin-top: 90px;
     box-shadow:  1px 1px 10px rgba(0,0,0,0.5);
+    position: relative;
 }
 
 .jumbotron{
     background-image: url("../img/logo13.jpg");
     background-attachment: fixed;
     background-size: cover;
-    height: 500px;
+    position: relative;
     
 }
 .jumbotron h5, .jumbotron p {
@@ -33,17 +38,40 @@ hr {
 }
 
 .gallery{
-    background-color: #eee;  
+    
+    background-color: #eee;
+    
 }
 
+.gallery .thumbnail{
+    opacity: 1;
+    float:  center;  
+}
+
+.row img {
+    margin-bottom: 40px;
+    box-shadow:  1px 1px 10px rgba(0,0,0,0.5);
+    position: relative;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 35px;
+    
+
+    
+}
 
 .contact{
- padding-top: 20px;
- min-height: 600px;
- margin-bottom: 200px;
+    background-image: url("../img/ajijuman99.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;  
+    background-size: cover ;
+    padding-top: 20px;
+    
+    margin-bottom: px;
 }
 .about{
-    min-height: 400px;
+    
     margin-top: 50px;
 }
 footer {
@@ -58,4 +86,15 @@ footer {
 .thefooter {
     padding-top: 20px;
     font-size: 0,9rem;
+}
+
+ul li .a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    box-sizing: content-box;
+}
+
+section {
+    min-height: 700px;
 }

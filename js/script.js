@@ -7,10 +7,13 @@ $(".page-scroll").click(function() {
     }, 1000, 'swing');
 });
 
-//  $(window).scroll(function(){
-//      var wScroll = $(this).scrollTop();
+ $(window).scroll(function(){
+     var wScroll = $(this).scrollTop();
 
-//      $('.jumbotron img').css({
-//          'transform' : 'translate(0px, '+ wScroll/4 +'%)'
-//      })
-//  })
+     $('.jumbotron img').css({
+         'transform' : 'translate(0px, '+ wScroll/4 +'%)'
+     })
+     if(wScroll > $('.gallery').offset().top) {
+         console.log('ok')
+     }
+ })
